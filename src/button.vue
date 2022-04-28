@@ -10,8 +10,12 @@
 </template>
 
 <script>
+import Icon from "./icon"
 export default {
   name: "r-button",
+  components:{
+    "r-icon":Icon
+  },
   data(){
     return{
       a:true

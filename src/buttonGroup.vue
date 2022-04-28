@@ -1,6 +1,21 @@
+<template>
+  <div class="button-group">
+    <slot></slot>
+  </div>
+</template>
 
-}
-}
+<script>
+export default {
+  name: "buttonGroup",
+  mounted() {
+    for (let node of this.$el.children){
+      // console.log(node.nodeName)
+      let name = node.nodeName.toLowerCase()
+      if( name !== 'button'){
+        console.warn(`r-button-group的子元素必须是r-button，但是你写的是${name}`)
+      }
+    }
+  }
 }
 </script>
 
