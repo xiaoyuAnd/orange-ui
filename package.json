@@ -1,7 +1,7 @@
 {
   "name": "orange-ui",
   "version": "0.0.1",
-  "description": "orange UI",
+  "description": "orange ui",
   "main": "index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
