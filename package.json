@@ -1,6 +1,6 @@
 {
   "name": "orange-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "orange ui",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "keywords": [
     "vue",
-    "UI"
+    "ui"
   ],
   "author": "xiaomitaotao",
   "license": "MIT",
