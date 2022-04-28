@@ -19,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/xiaoyuAnd/orange-ui/issues"
   },
-  "homepage": "https://github.com/xiaoyuAnd/orange-ui#readme"
+  "homepage": "https://github.com/xiaoyuAnd/orange-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.14",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.3.0",
+    "parcel-bundler": "^1.12.5",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
 }
