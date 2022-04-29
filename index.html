@@ -32,18 +32,44 @@
         font-size: var(--font-size);
     }
 
+    .box {
+        margin: 50px 0;
+    }
 </style>
 <body>
 <div id="app">
-    <r-button icon="settings" :loading="loading1" @click="loading1=!loading1" >按钮</r-button>
-    <r-button icon-position="right" icon="upup" :loading="loading3" @click="loading3=!loading3">按钮</r-button>
-    <r-button  icon="download" >按钮</r-button>
-    <r-button :loading="loading2" @click="loading2=!loading2">按钮</r-button>
-    <r-button-group>
-        <r-button icon="left" >按钮</r-button>
-        <r-button>更多</r-button>
-        <r-button icon="right" icon-position="right">按钮</r-button>
-    </r-button-group>
+    <div class="box">
+        <o-input  value="value"></o-input>
+        <o-input  placeholder="placeholder"></o-input>
+        <o-input  placeholder="placeholder" :disabled="true"></o-input>
+        <o-input  placeholder="placeholder" disabled></o-input>
+        <o-input  placeholder="placeholder" :readonly="true"></o-input>
+        <o-input  placeholder="placeholder" readonly></o-input>
+    </div>
+    <div class="box">
+        <o-input  value="value" error="最少输入两个字符"></o-input>
+        <o-input  value="value" success="输入符合规范通过"></o-input>
+    </div>
+    <div class="box">
+        <o-input  value="value" @change="inputChange"></o-input>
+    </div>
+    <div class="box">
+        <o-input  v-model="message" ></o-input>
+        {{message}}
+    </div>
+
+    <div class="box">
+        <o-button icon="settings" :loading="loading1" @click="loading1=!loading1">按钮</o-button>
+        <o-button icon-position="right" icon="upup" :loading="loading3" @click="loading3=!loading3">按钮</o-button>
+        <o-button icon="download">按钮</o-button>
+        <o-button :loading="loading2" @click="loading2=!loading2">按钮</o-button>
+        <o-button-group>
+            <o-button icon="left">按钮</o-button>
+            <o-button>更多</o-button>
+            <o-button icon="right" icon-position="right">按钮</o-button>
+        </o-button-group>
+    </div>
+
 </div>
 <script src="./src/app.js"></script>
 <!--<script src="//at.alicdn.com/t/font_3358559_rot3tjah3mi.js"></script>-->

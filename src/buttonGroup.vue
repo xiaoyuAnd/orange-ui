@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "buttonGroup",
+  name: "OButtonGroup",
   mounted() {
     for (let node of this.$el.children){
       // console.log(node.nodeName)

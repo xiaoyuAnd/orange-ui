@@ -12,7 +12,7 @@
 <script>
 import Icon from "./icon"
 export default {
-  name: "r-button",
+  name: "OButton",
   components:{
     "r-icon":Icon
   },
