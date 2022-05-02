@@ -33,16 +33,16 @@ describe('Input', () => {
         expect(useElements.placeholder).to.equal('1234')
         vm.$destroy()
     })
-    it('props/p.', () => {
-        const Constructor = Vue.extend(Input)
-        const vm = new Constructor({
-            propsData: {
-                disabled:true
-            }
-        }).$mount()
-        const useElements = vm.$el.querySelectorAll('input')
-        expect(useElements.disabled).to.equal('true')
-        vm.$destroy()
-    })
+    // it('props/p.', () => {
+    //     const Constructor = Vue.extend(Input)
+    //     const vm = new Constructor({
+    //         propsData: {
+    //             disabled:true
+    //         }
+    //     }).$mount()
+    //     const useElements = vm.$el.querySelectorAll('input')
+    //     expect(useElements.disabled).to.equal('true')
+    //     vm.$destroy()
+    // })
 
 })
