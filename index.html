@@ -41,17 +41,17 @@
     <div class="box">
         <o-input  value="value"></o-input>
         <o-input  placeholder="placeholder"></o-input>
-        <o-input  placeholder="placeholder" :disabled="true"></o-input>
-        <o-input  placeholder="placeholder" disabled></o-input>
-        <o-input  placeholder="placeholder" :readonly="true"></o-input>
-        <o-input  placeholder="placeholder" readonly></o-input>
+        <o-input  value="value" :disabled="true"></o-input>
+        <o-input  value="value" disabled></o-input>
+        <o-input  value="value" :readonly="true"></o-input>
+        <o-input  value="value" readonly></o-input>
     </div>
     <div class="box">
         <o-input  value="value" error="最少输入两个字符"></o-input>
         <o-input  value="value" success="输入符合规范通过"></o-input>
     </div>
     <div class="box">
-        <o-input  value="value" @change="inputChange"></o-input>
+        <o-input  value="change" @change="inputChange"></o-input>
     </div>
     <div class="box">
         <o-input  v-model="message" ></o-input>
