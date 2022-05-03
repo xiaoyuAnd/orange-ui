@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :style="{marginLeft: -gutter/2 + 'px',marginRight: -gutter/2 + 'px' }">
+  <div class="row" :style="comMargin">
     <slot></slot>
   </div>
 </template>
@@ -10,6 +10,11 @@ export default {
   props:{
     gutter:{
       type:[String,Number]
+    }
+  },
+  computed:{
+   comMargin(){
+      return {marginLeft: -this.gutter/2 + 'px',marginRight: -this.gutter/2 + 'px'}
     }
   },
   mounted() {

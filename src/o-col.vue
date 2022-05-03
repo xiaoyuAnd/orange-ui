@@ -1,5 +1,5 @@
 <template>
-  <div class="col" :class="[span && `col-${span}`,offset && `offset-${offset}`]" :style="{paddingLeft:gutter/2 + 'px',paddingRight:gutter/2 + 'px'}">
+  <div class="col" :class="comClass" :style=" comPadding">
     <div style="border: 1px solid green;height: 100px">
       <slot></slot>
     </div>
@@ -9,6 +9,14 @@
 <script>
 export default {
   name: "OCol",
+  computed:{
+    comPadding(){
+      return {paddingLeft:this.gutter/2 + 'px',paddingRight:this.gutter/2 + 'px'}
+    },
+    comClass(){
+      return [this.span && `col-${this.span}`,this.offset && `offset-${this.offset}`]
+    }
+  },
   data(){
     return{
       gutter:0
