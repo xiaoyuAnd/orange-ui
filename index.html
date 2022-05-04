@@ -38,78 +38,83 @@
 </style>
 <body>
 <div id="app">
-    <div style="border: 1px solid #000">
-        <div>
-            <o-row gutter="20">
-                <o-col>12</o-col>
-                <o-col>12</o-col>
-            </o-row>
-        </div>
-        <div>
-            <o-row gutter="20">
-                <o-col span="8">8</o-col>
-                <o-col span="8">8</o-col>
-                <o-col span="8">8</o-col>
-            </o-row>
-        </div>
-        <div>
-            <o-row gutter="20">
-                <o-col span="4">4</o-col>
-                <o-col span="18" offset="2">18</o-col>
-            </o-row>
-        </div>
-        <div>
-            <o-row gutter="20">
-                <o-col span="4">4</o-col>
-                <o-col span="16" offset="4">16</o-col>
-            </o-row>
-        </div>
-        <div>
-            <o-row gutter="20">
-                <o-col span="4">4</o-col>
-                <o-col span="8" offset="5">14</o-col>
-                <o-col span="2" offset="5">14</o-col>
-            </o-row>
-        </div>
-        <div>
-            <o-row gutter="20">
-                <o-col span="4">4</o-col>
-                <o-col span="18" offset="2">18</o-col>
-            </o-row>
-        </div>
-    </div>
+    <o-layout>
+        <o-header>header</o-header>
+        <o-content>content</o-content>
+        <o-footer>footer</o-footer>
+    </o-layout>
+    <!--    <div style="border: 1px solid #000">-->
+    <!--        <div>-->
+    <!--            <o-row gutter="20">-->
+    <!--                <o-col>12</o-col>-->
+    <!--                <o-col>12</o-col>-->
+    <!--            </o-row>-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <o-row gutter="20">-->
+    <!--                <o-col span="8">8</o-col>-->
+    <!--                <o-col span="8">8</o-col>-->
+    <!--                <o-col span="8">8</o-col>-->
+    <!--            </o-row>-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <o-row gutter="20">-->
+    <!--                <o-col span="4">4</o-col>-->
+    <!--                <o-col span="18" offset="2">18</o-col>-->
+    <!--            </o-row>-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <o-row gutter="20">-->
+    <!--                <o-col span="4">4</o-col>-->
+    <!--                <o-col span="16" offset="4">16</o-col>-->
+    <!--            </o-row>-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <o-row gutter="20">-->
+    <!--                <o-col span="4">4</o-col>-->
+    <!--                <o-col span="8" offset="5">14</o-col>-->
+    <!--                <o-col span="2" offset="5">14</o-col>-->
+    <!--            </o-row>-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <o-row gutter="20">-->
+    <!--                <o-col span="4">4</o-col>-->
+    <!--                <o-col span="18" offset="2">18</o-col>-->
+    <!--            </o-row>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
-        <div class="box">
-            <o-input  value="value"></o-input>
-            <o-input  placeholder="placeholder"></o-input>
-            <o-input  value="value" :disabled="true"></o-input>
-            <o-input  value="value" disabled></o-input>
-            <o-input  value="value" :readonly="true"></o-input>
-            <o-input  value="value" readonly></o-input>
-        </div>
-        <div class="box">
-            <o-input  value="value" error="最少输入两个字符"></o-input>
-            <o-input  value="value" success="输入符合规范通过"></o-input>
-        </div>
-        <div class="box">
-            <o-input  value="change" @change="inputChange"></o-input>
-        </div>
-        <div class="box">
-            <o-input  v-model="message" ></o-input>
-            {{message}}
-        </div>
+    <!--        <div class="box">-->
+    <!--            <o-input  value="value"></o-input>-->
+    <!--            <o-input  placeholder="placeholder"></o-input>-->
+    <!--            <o-input  value="value" :disabled="true"></o-input>-->
+    <!--            <o-input  value="value" disabled></o-input>-->
+    <!--            <o-input  value="value" :readonly="true"></o-input>-->
+    <!--            <o-input  value="value" readonly></o-input>-->
+    <!--        </div>-->
+    <!--        <div class="box">-->
+    <!--            <o-input  value="value" error="最少输入两个字符"></o-input>-->
+    <!--            <o-input  value="value" success="输入符合规范通过"></o-input>-->
+    <!--        </div>-->
+    <!--        <div class="box">-->
+    <!--            <o-input  value="change" @change="inputChange"></o-input>-->
+    <!--        </div>-->
+    <!--        <div class="box">-->
+    <!--            <o-input  v-model="message" ></o-input>-->
+    <!--            {{message}}-->
+    <!--        </div>-->
 
-        <div class="box">
-            <o-button icon="settings" :loading="loading1" @click="loading1=!loading1">按钮</o-button>
-            <o-button icon-position="right" icon="upup" :loading="loading3" @click="loading3=!loading3">按钮</o-button>
-            <o-button icon="download">按钮</o-button>
-            <o-button :loading="loading2" @click="loading2=!loading2">按钮</o-button>
-            <o-button-group>
-                <o-button icon="left">按钮</o-button>
-                <o-button>更多</o-button>
-                <o-button icon="right" icon-position="right">按钮</o-button>
-            </o-button-group>
-        </div>
+    <!--        <div class="box">-->
+    <!--            <o-button icon="settings" :loading="loading1" @click="loading1=!loading1">按钮</o-button>-->
+    <!--            <o-button icon-position="right" icon="upup" :loading="loading3" @click="loading3=!loading3">按钮</o-button>-->
+    <!--            <o-button icon="download">按钮</o-button>-->
+    <!--            <o-button :loading="loading2" @click="loading2=!loading2">按钮</o-button>-->
+    <!--            <o-button-group>-->
+    <!--                <o-button icon="left">按钮</o-button>-->
+    <!--                <o-button>更多</o-button>-->
+    <!--                <o-button icon="right" icon-position="right">按钮</o-button>-->
+    <!--            </o-button-group>-->
+    <!--        </div>-->
 
 </div>
 <script src="./src/app.js"></script>
