@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <slot></slot>
   </div>
 </template>
@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.header{
+  border: 1px solid red;
+}
 </style>

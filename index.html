@@ -25,7 +25,7 @@
     }
 
     #app {
-        margin: 20px;
+        /*margin: 20px;*/
     }
 
     body {
@@ -38,10 +38,13 @@
 </style>
 <body>
 <div id="app">
-    <o-layout>
-        <o-header>header</o-header>
-        <o-content>content</o-content>
-        <o-footer>footer</o-footer>
+    <o-layout style="height: 100vh">
+        <o-sider>sider</o-sider>
+        <o-layout>
+            <o-header>header</o-header>
+            <o-content>content</o-content>
+            <o-footer>footer</o-footer>
+        </o-layout>
     </o-layout>
     <!--    <div style="border: 1px solid #000">-->
     <!--        <div>-->
