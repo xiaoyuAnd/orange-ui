@@ -10,6 +10,7 @@ import Header from "./l-header"
 import Content from "./l-content"
 import Sider from "./l-sider"
 import Footer from "./l-footer"
+import Toast from "./toast"
 
 Vue.component('o-button',Button)
 Vue.component('o-icon',Icon)
@@ -23,6 +24,9 @@ Vue.component('o-content',Content)
 Vue.component('o-sider',Sider)
 Vue.component('o-header',Header)
 Vue.component('o-footer',Footer)
+
+Vue.component('o-toast',Toast)
+
 new Vue({
     el:'#app',
     data:{
