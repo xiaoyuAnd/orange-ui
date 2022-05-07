@@ -6,7 +6,31 @@
 
 <script>
 export default {
-  name: "OToast"
+  name: "OToast",
+  props:{
+    autoClose:{
+      type:String,
+      default:true
+    },
+    autoCloseDelay:{
+      type:Number,
+      default: 3
+    }
+  },
+  mounted() {
+    if(this.autoClose){
+      setTimeout(()=>{
+        this.close()
+      },this.autoCloseDelay*1000)
+    }
+
+  },
+  methods:{
+    close(){
+      this.$el.remove()
+      this.$destroy()
+    }
+  }
 }
 </script>
 
@@ -21,7 +45,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   align-items: center;
   background: $toast-bg;
   border-radius: 4px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
   padding: 0 16px;
 }
 </style>
