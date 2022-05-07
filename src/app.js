@@ -11,6 +11,7 @@ import Content from "./l-content"
 import Sider from "./l-sider"
 import Footer from "./l-footer"
 import Toast from "./toast"
+import TPlugin from "./t-plugin";
 
 Vue.component('o-button',Button)
 Vue.component('o-icon',Icon)
@@ -26,6 +27,7 @@ Vue.component('o-header',Header)
 Vue.component('o-footer',Footer)
 
 Vue.component('o-toast',Toast)
+Vue.use(TPlugin)
 
 new Vue({
     el:'#app',
@@ -38,6 +40,9 @@ new Vue({
     methods:{
         inputChange(e){
             console.log(e)
+        },
+        showMessage(){
+            this.$toast('我是展示信息')
         }
     }
 })
